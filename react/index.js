@@ -36,7 +36,7 @@ const App = () => {
   return html`
     <div>
       <form onSubmit=${handleSubmit(onSubmit)}>
-        ${createElement("input", { ...register("name") })}
+        ${createElement("input", { ...register("name", { required: true }) })}
         <button>add</button>
       </form>
       <table>
