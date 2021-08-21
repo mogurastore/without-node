@@ -24,6 +24,11 @@ const App = () => {
     setTodos(await db.todos.toArray());
   };
 
+  const deleteTodo = async (id) => {
+    await db.todos.delete(id);
+    fetchTodos();
+  };
+
   useEffect(() => {
     fetchTodos();
   }, []);
@@ -34,13 +39,24 @@ const App = () => {
         ${createElement("input", { ...register("name") })}
         <button>add</button>
       </form>
-      <ul>
+      <table>
         ${todos.map(
-          (todo) => html`<li>
-            <span>${todo.name}</span>
-          </li>`
+          (todo) => html`
+            <tr>
+              <td>${todo.name}</td>
+              <td>
+                <button
+                  onClick=${() => {
+                    deleteTodo(todo.id);
+                  }}
+                >
+                  remove
+                </button>
+              </td>
+            </tr>
+          `
         )}
-      </ul>
+      </table>
     </div>
   `;
 };
