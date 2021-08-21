@@ -61,4 +61,4 @@ const App = () => {
   `;
 };
 
-ReactDOM.render(html`<${App} />`, document.body);
+ReactDOM.render(html`<${App} />`, document.querySelector("#root"));
