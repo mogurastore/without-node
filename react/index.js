@@ -1,8 +1,8 @@
+import Dexie from "https://esm.sh/dexie";
+import { html } from "https://esm.sh/htm/react";
 import { createElement, useEffect, useState } from "https://esm.sh/react";
 import ReactDOM from "https://esm.sh/react-dom";
-import { html } from "https://esm.sh/htm/react";
 import { useForm } from "https://esm.sh/react-hook-form";
-import Dexie from "https://esm.sh/dexie";
 
 const db = new Dexie("react");
 
