@@ -1,8 +1,8 @@
-import { createElement, useEffect, useState } from "//cdn.skypack.dev/react";
-import ReactDOM from "//cdn.skypack.dev/react-dom";
-import { html } from "//cdn.skypack.dev/htm/react";
-import { useForm } from "//cdn.skypack.dev/react-hook-form";
-import Dexie from "//cdn.skypack.dev/dexie";
+import { createElement, useEffect, useState } from "//esm.sh/react";
+import ReactDOM from "//esm.sh/react-dom";
+import { html } from "//esm.sh/htm/react";
+import { useForm } from "//esm.sh/react-hook-form";
+import Dexie from "//esm.sh/dexie";
 
 const db = new Dexie("react");
 
